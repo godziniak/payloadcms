@@ -15,6 +15,9 @@ import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 
+import { pl } from '@payloadcms/translations/languages/pl';
+import { en } from '@payloadcms/translations/languages/en';
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -54,6 +57,13 @@ export default buildConfig({
         },
       ],
     },
+  },
+  i18n: {
+    supportedLanguages: {
+      pl,
+      en,
+    },
+    fallbackLanguage: 'en', // język awaryjny
   },
   // This config helps us configure global or default features that the other editors can inherit
   editor: defaultLexical,
