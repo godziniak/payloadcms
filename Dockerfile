@@ -17,7 +17,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 # --------------------------------------------------
 FROM base AS deps
 
-Get-Content .dockerignoreCOPY package.json package-lock.json .npmrc ./
+COPY package.json package-lock.json .npmrc ./
 
 RUN --mount=type=cache,target=/root/.npm \
   npm ci
