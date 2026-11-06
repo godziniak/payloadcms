@@ -18,10 +18,10 @@ export const Media: CollectionConfig = {
   slug: 'media',
   folders: true,
   access: {
-    create: authenticated,
-    delete: authenticated,
+    create: anyone,
+    delete: anyone,
     read: anyone,
-    update: authenticated,
+    update: anyone,
   },
   fields: [
     {
